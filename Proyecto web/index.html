@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Task Master</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!-- Fonts from Google Fonts and external libraries -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <!-- Carga de estilos css personalizados -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+
+  </head>
+  <body>
+ <section class="navbar-top">
+      <header class="encabezado">
+          <nav class="navbar navbar-light navbar-fixed-top">
+            <div class="container">
+              <a class="navbar-brand" href="#"><img src="./images/logotipo-white.png" alt=""></a>
+              <i class='bx bx-menu'></i>
+              <input type="search" name="" placeholder="Busqueda..." id="">
+            </div>
+          </nav>
+      </header>
+ </section>
+    <div class="sidebar" style="display: none;">
+      <ul class="list-group-task">
+        <li class="list-task-menu">
+          Inicio
+        </li>
+        <li class="list-task-menu">
+          Mis tareas
+        </li>
+        <li class="list-task-menu">
+          Calendario
+        </li>
+        <li class="list-task-menu">
+          Mensajes
+        </li>
+        <li class="list-task-menu">
+          Metas
+        </li>
+        <li class="list-task-menu">
+          Portafolio
+        </li>
+      </ul>
+    </div>
+
+
+ <section class="py-2 text-xs-center">
+      <div class="container">
+        <div class="container-user">
+          <span class="notification">2</span>
+          <span class="tooltip">Notificaciones</span>
+          <img src="./images/user.png" class="user-photo" alt="...">
+          <ul class="list-group-user">
+            <li class="list-group-item">Pendientes</li>
+            <li class="list-group-item">Calendario</li>
+            <li class="list-group-item">Recordatorios</li>
+          </ul>
+        </div>
+      </div>  
+      <div class="container">    
+          <div class="row">
+            <div class="user-tasks1 col-xl-5 col-12">
+              <button class="create-task">Crear tarea</button>
+              <h3 class="title-task h5">Tareas</h3>
+              <ul class="list-group-task">
+                <span>10 Aug</span>
+                <li class="list-task">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">Realizar Interfaces
+                </li>
+                <span class="on date">01 Aug</span>
+                <li class="list-task">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">Wireframes Coca Cola
+                </li>
+                <span>12 Aug</span>
+                <li class="list-task">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">Reuniones Pepsi
+                </li>
+                <span class="past date">14 Jul</span>
+                <li class="list-task">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">Prototipado Design
+                </li>
+                <span class="on date">02 Oct</span>
+                <li class="list-task">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">UX UI mision
+                </li>
+                <span class="on date">30 Aug</span>
+                <li class="list-task">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">Limpiar codigo visual
+                </li>
+                <span>20 Aug</span>
+                <li class="list-task">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">Integrar reactJs/NodeJs
+                </li>
+                <span class="past date">21 Jul</span>
+                <li class="list-task">
+                  <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">Pruebas tester QA
+                </li>
+              </ul>
+            </div>
+            <!---<div class="user-welcome col-xl-6 col-12">
+              <button class="done-task">Crear tarea</button>
+              <h3 class="title-task h5">Bienvenido a tu gestor amigo</h3>
+            </div>--->
+            <div class="user-tasks2 col-xl-6 col-12" style="display: none;">
+              <button class="done-task">Hecho</button>
+              <h3 class="title-task h5">Nueva tarea</h3>
+              <input type="text" name="" placeholder="Nombre de tarea" id="">
+              <select class="form-select" aria-label="">
+                <option selected>Area</option>
+                <option value="1">Recursos humanos</option>
+                <option value="2">Tecnologia</option>
+                <option value="3">Contaduria</option>
+              </select>
+              <select class="form-select" aria-label="">
+                <option selected>Fecha</option>
+                <option value="1">2 dias</option>
+                <option value="2">5 dias</option>
+                <option value="3">10 dias</option>
+              </select>
+              <select class="form-select" aria-label="">
+                <option selected>Integrante</option>
+                <option value="1">Luis Diaz</option>
+                <option value="2">Felipe Medina</option>
+                <option value="3">Sandra Muñoz</option>
+              </select>
+              <select class="form-select" aria-label="">
+                <option selected>Importancia</option>
+                <option value="1">Alta</option>
+                <option value="2">Mediana</option>
+                <option value="3">Baja</option>
+              </select>
+              <div class="form-floating">
+                <textarea class="form-control" placeholder="Deja tu comentario aqui..." id="floatingTextarea2" style="height: 100px"></textarea>
+              </div>
+            </div>
+          </div> 
+      </div>
+ </section>
+
+  <script>
+    $(document).ready(function(){
+        $(".create-task").click(function(){
+            $(".user-tasks2").toggle();
+        });
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+        $(".bx.bx-menu").click(function(){
+            $(".sidebar").toggle();
+        });
+    });
+  </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
